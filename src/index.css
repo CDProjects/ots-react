@@ -13,10 +13,29 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  color: white;
 }
 
 #root {
-  min-height: 100%;
-  /* If you want a semi-transparent overlay on the background, uncomment the next line */
-  /* background-color: rgba(0, 0, 0, 0.5); */
+  min-height: 100vh;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container {
+  flex-grow: 1;
+  background-color: black;
+  width: 100%;
+}
+
+@media (min-width: 1025px) {
+  .content-container {
+    width: 70%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
 }

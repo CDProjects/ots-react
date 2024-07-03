@@ -6,8 +6,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar />
-        {/* Your other components and routes go here */}
+        <div className="content-container">
+          <Navbar />
+          {/* Your routes and other components go here */}
+        </div>
       </div>
     </Router>
   );
