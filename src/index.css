@@ -1,15 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
-body {
+html, body {
+  height: 100%;
   margin: 0;
-  font-family: 'Oswald', sans-serif, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Oswald', sans-serif;
+  background: url('./Images/Team_2023_Tampere_3.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#root {
+  min-height: 100%;
+  /* If you want a semi-transparent overlay on the background, uncomment the next line */
+  /* background-color: rgba(0, 0, 0, 0.5); */
 }
