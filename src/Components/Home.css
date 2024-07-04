@@ -125,12 +125,14 @@
   }
 
   .carousel-container {
-    left: 30%;
-    width: 70%;
+    left: 40%;
+    width: 52%;
+    height: 90%; /* Reduce the height to move it up */
+    top: 5%; /* Move it down from the top a bit */
   }
 
   .content-wrapper {
-    margin-left: 10%;
+    margin-left: 8%;
     margin-bottom: 15%;
   }
 
