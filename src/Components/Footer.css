@@ -1,57 +1,64 @@
 .footer {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 70%;
-    padding: 10px 0;
-    box-sizing: border-box;
-}
-
-.footer-content {
+    position: fixed;
+    bottom: 20px; /* Adjust this value to control how far from the bottom the logos appear */
+    left: 0;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer h3 {
-    color: white;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-    margin-left: 10px;
+    z-index: 1000; /* Ensure it's above the carousel */
 }
 
 .sponsor-images {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    width: 80%;
+    gap: 15px; /* Space between rows */
+}
+
+.sponsor-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between logos in a row */
 }
 
 .sponsor-image {
-    height: 40px; /* Increased back to larger size */
+    height: 30px; /* Adjust this value as needed */
     width: auto;
     object-fit: contain;
-    margin: 0 5px; /* Add some horizontal spacing */
 }
 
-@media (max-width: 1200px) {
-    .sponsor-image {
-        height: 35px; /* Slightly reduce size on smaller screens */
-    }
+.sponsor-image.lindos {
+    height: 40px; /* Make Lindos logo slightly larger */
 }
 
-@media (max-width: 1024px) {
-    .footer-content {
-        width: 90%;
-        margin-left: 5%;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer {
+        bottom: 10px; /* Closer to bottom on mobile */
     }
+
     .sponsor-images {
-        flex-wrap: wrap;
-        justify-content: center;
+        gap: 10px; /* Less space between rows on mobile */
     }
+
+    .sponsor-row {
+        gap: 10px; /* Less space between logos in a row on mobile */
+    }
+
     .sponsor-image {
-        margin: 5px;
+        height: 35px; /* Smaller on mobile devices */
+    }
+
+    .sponsor-image.lindos {
+        height: 35px; /* Adjust Lindos logo size for mobile */
+    }
+}
+
+@media (min-width: 1025px) {
+    .sponsor-image {
+        height: 35px; /* Larger on desktop */
+    }
+
+    .sponsor-image.lindos {
+        height: 45px; /* Adjust Lindos logo size for desktop */
     }
 }
