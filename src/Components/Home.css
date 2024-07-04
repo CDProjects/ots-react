@@ -2,17 +2,17 @@
 .home-section {
     position: relative;
     width: 100%;
-    height: calc(100vh - 125px); /* Subtract footer height */
+    height: calc(100vh - 8.5rem); /* Subtract footer height */
     overflow: hidden;
     background-color: #000;
 }
   
   .carousel-container {
     position: absolute;
-    top: 5%;
+    top: 0;
     left: 40%;
-    width: 55%;
-    height: 90%;
+    width: 50%;
+    height: 100%;
     z-index: 1;
   }
   
