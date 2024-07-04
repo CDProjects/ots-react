@@ -254,10 +254,82 @@
 
 /* Extra large screens */
 @media (min-width: 1600px) {
-  .carousel-container {
-    left: 55%;
-    width: 100%;
-    height: 100%;
-    top: 15%;
+    /* Logo and title adjustments */
+    .home-club-medium {
+      left: 19%;
+      top: 10%;
+    }
+  
+    .home-image-medium {
+      width: 180px; /* Increase logo size */
+    }
+  
+    .home-club-medium h1 {
+      font-size: 35px; /* Increase title font size */
+    }
+  
+    .home-club-medium h2 {
+      font-size: 25px; /* Increase subtitle font size */
+    }
+  
+    /* Home title and paragraph adjustments */
+    .home-section .home-content .content-wrapper {
+      left: 20%; /* Move content wrapper to the left */
+      bottom: 35%; /* Move content wrapper up */
+      width: 35%; /* Increase width slightly */
+    }
+  
+    .home-section .home-content .content-wrapper .home-title {
+      font-size: 3rem !important; /* Increase title font size */
+    }
+  
+    .home-section .home-content .content-wrapper .home-paragraph {
+      font-size: 1.5rem !important; /* Increase paragraph font size */
+    }
+
+    .carousel-container {
+      position: absolute;
+      left: 40%;
+      width: 55%;
+      height: 80%;
+      top: 10%;
+      overflow: hidden;
+    }
+  
+    .carousel {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+  
+    .carousel-item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+  
+    .carousel-item.active {
+      opacity: 1;
+    }
+  
+    .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+}
+
+@media (min-width: 1920px) {
+  .carousel-item img {
+    object-position: center 25%; /* Adjust this value as needed */
   }
+}
+
+.carousel-container {
+  top: 2%;
 }

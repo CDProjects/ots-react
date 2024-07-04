@@ -210,14 +210,6 @@
   }
 }
 
-  @media (min-width: 1025px) {
-    .nav-bar, .nav-bar-medium {
-      position: sticky;
-      top: 0;
-      /* other styles */
-    }
-  }
-
   @media screen and (max-width: 1600px) {
     .home-image-medium {
       width: 140px;
