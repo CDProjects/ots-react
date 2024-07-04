@@ -219,12 +219,8 @@
   }
 
   @media screen and (max-width: 1600px) {
-    .home-club-medium {
-      left: 15%;
-    }
-  
     .home-image-medium {
-      width: 180px;
+      width: 140px;
     }
   
     .home-club-medium h1 {
@@ -233,6 +229,14 @@
   
     .home-club-medium h2 {
       font-size: 27px;
+    }
+
+    .home-content .home-title {
+      font-size: 2.5rem !important;
+    }
+  
+    .home-content .home-paragraph {
+      font-size: 1rem !important;
     }
   }
   
