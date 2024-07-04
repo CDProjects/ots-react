@@ -16,7 +16,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 10px; /* Reduced gap */
+    padding: 0 10px; /* Add some horizontal padding */
 }
 
 .sponsor-image {
