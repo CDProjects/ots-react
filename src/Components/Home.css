@@ -1,127 +1,159 @@
-/* src/Components/Home.css */
 .home-section {
-    position: relative;
-    width: 100%;
-    height: calc(100vh - 8.5rem); /* Subtract footer height */
-    overflow: hidden;
-    background-color: #000;
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 8.5rem);
+  overflow: hidden;
+  background-color: #000;
 }
-  
-  .carousel-container {
-    position: absolute;
-    top: 0;
-    left: 40%;
-    width: 50%;
-    height: 100%;
-    z-index: 1;
-  }
-  
-  .carousel {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .carousel-item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-  
-  .carousel-item.active {
-    opacity: 1;
-  }
-  
-  .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-  
-  .home-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 2rem;
-    z-index: 2;
-    box-sizing: border-box; /* Include padding in the element's total width and height */
+
+.carousel-container {
+  position: absolute;
+  top: 0;
+  left: 40%;
+  width: 50%;
+  height: 100%;
+  z-index: 1;
 }
-  
-  .logo-title {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
-  }
-  
+
+.carousel {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.home-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 30rem;
+  margin-left: 5.5rem;
+  margin-bottom: 10rem;
+}
+
+.home-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.home-paragraph {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.about-us-btn {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  background-color: #2e8b57;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.3125rem;
+  transition: background-color 0.3s ease;
+}
+
+.about-us-btn:hover {
+  background-color: #3cb371;
+}
+
+@media (max-width: 48em) {
   .logo {
-    width: 6.25rem; /* 100px */
-    height: 6.25rem; /* 100px */
-    margin-right: 1rem;
+    width: 3.75rem;
+    height: 3.75rem;
   }
-  
-  .title-container {
-    color: white;
+
+  .home-title {
+    font-size: 2rem;
+  }
+
+  .home-paragraph {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .home-section {
+    height: 100vh;
+  }
+
+  .carousel-container {
+    left: 0;
+    width: 100%;
   }
 
   .content-wrapper {
-    width: 100%;
-    max-width: 30rem;
-    margin-left: 5.5rem;
-    margin-bottom: 10rem; /* Reduce this value */
+    margin-left: 2rem;
+    margin-bottom: 5rem;
+  }
 }
-  
-  .home-title {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: white;
-  }
-  
-  .home-paragraph {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    color: white;
-  }
-  
-  .about-us-btn {
-    display: inline-block;
-    padding: 0.625rem 1.25rem; /* 10px 20px */
-    background-color: #2e8b57;
-    color: white;
-    text-decoration: none;
-    border-radius: 0.3125rem; /* 5px */
-    transition: background-color 0.3s ease;
-  }
-  
-  .about-us-btn:hover {
-    background-color: #3cb371;
-  }
-  
-  @media (max-width: 48em) { /* 768px */
-    .logo {
-      width: 3.75rem; /* 60px */
-      height: 3.75rem; /* 60px */
-    }
-  
-    .home-title {
-      font-size: 2rem;
-    }
-  
-    .home-paragraph {
-      font-size: 1rem;
-    }
+
+@media (min-width: 1025px) {
+  .home-section {
+    height: calc(100vh - 100px);
   }
 
-  @media (max-width: 1024px) {
-    .home-section {
-        height: 100vh; /* Full height on smaller screens */
-    }
+  .carousel-container {
+    left: 30%;
+    width: 70%;
+  }
+
+  .content-wrapper {
+    margin-left: 10%;
+    margin-bottom: 15%;
+  }
+
+  .home-title {
+    font-size: 3.5rem;
+  }
+
+  .home-paragraph {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    margin-left: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .home-title {
+    font-size: 2.5rem;
+  }
+
+  .home-paragraph {
+    font-size: 1rem;
+  }
 }

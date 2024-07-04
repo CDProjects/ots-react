@@ -1,28 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import './Home.css';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import "./Home.css";
 
 // Import all images
-import akseli from '../Images/Akseli 1.png';
-import ale from '../Images/Ale 1.png';
-import ari from '../Images/Ari GV1.png';
-import glenn from '../Images/Glenn 1.png';
-import jaska from '../Images/Jaska 1.png';
-import jay from '../Images/Jay 1.png';
-import jemi from '../Images/Jemi 1.png';
-import jim from '../Images/Jim 1.png';
-import linus from '../Images/Linus 1.png';
-import juri from '../Images/Juri 1.png';
-import juuso from '../Images/Juuso 1.png';
-import markus from '../Images/Markus 1.png';
-import niko from '../Images/Niko 1.png';
-import petu from '../Images/Petu 1.png';
-import samu from '../Images/Samu 1.png';
-import stefu from '../Images/Stefu 1.png';
-import taras from '../Images/Taras 1.png';
-import tommi from '../Images/Tommi 1.png';
-import tommiP from '../Images/Tommi P 1.png';
-import tuomas from '../Images/Tuomas 1.png';
+import akseli from "../Images/Akseli 1.png";
+import ale from "../Images/Ale 1.png";
+import ari from "../Images/Ari GV1.png";
+import glenn from "../Images/Glenn 1.png";
+import jaska from "../Images/Jaska 1.png";
+import jay from "../Images/Jay 1.png";
+import jemi from "../Images/Jemi 1.png";
+import jim from "../Images/Jim 1.png";
+import linus from "../Images/Linus 1.png";
+import juri from "../Images/Juri 1.png";
+import juuso from "../Images/Juuso 1.png";
+import markus from "../Images/Markus 1.png";
+import niko from "../Images/Niko 1.png";
+import petu from "../Images/Petu 1.png";
+import samu from "../Images/Samu 1.png";
+import stefu from "../Images/Stefu 1.png";
+import taras from "../Images/Taras 1.png";
+import tommi from "../Images/Tommi 1.png";
+import tommiP from "../Images/Tommi P 1.png";
+import tuomas from "../Images/Tuomas 1.png";
 
 const images = [
   { src: akseli, alt: "Akseli" },
@@ -44,42 +44,50 @@ const images = [
   { src: taras, alt: "Taras" },
   { src: tommi, alt: "Tommi" },
   { src: tommiP, alt: "Tommi P" },
-  { src: tuomas, alt: "Tuomas" }
+  { src: tuomas, alt: "Tuomas" },
 ];
 
 const Home = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-  
-    useEffect(() => {
-      const interval = setInterval(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-      }, 3000);
-      return () => clearInterval(interval);
-    }, []);
-  
-    return (
-      <section id="home" className="home-section">
-        <div id="home-marker"></div>
-        <div className="carousel-container">
-          <div className="carousel">
-            {images.map((image, index) => (
-              <div key={index} className={`carousel-item ${index === currentIndex ? 'active' : ''}`}>
-                <img src={image.src} alt={image.alt} />
-              </div>
-            ))}
-          </div>
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <section id="home" className="home-section">
+      <div id="home-marker"></div>
+      <div className="carousel-container">
+        <div className="carousel">
+          {images.map((image, index) => (
+            <div
+              key={index}
+              className={`carousel-item ${
+                index === currentIndex ? "active" : ""
+              }`}
+            >
+              <img src={image.src} alt={image.alt} />
+            </div>
+          ))}
         </div>
-        <div className="home-content">
-          <div className="content-wrapper">
-            <h1 className="home-title">#wearerecruiting</h1>
-            <p className="home-paragraph">
-              We are on the hunt for new people and players of <br></br>all sizes to join our club - No experience needed!
-            </p>
-            <Link to="/contact" className="about-us-btn">MORE ABOUT THIS</Link>
-          </div>
+      </div>
+      <div className="home-content">
+        <div className="content-wrapper">
+          <h1 className="home-title">#wearerecruiting</h1>
+          <p className="home-paragraph">
+            We are on the hunt for new people and players of <br />
+            all sizes to join our club - No experience needed!
+          </p>
+          <Link to="/contact" className="about-us-btn">
+            MORE ABOUT THIS
+          </Link>
         </div>
-      </section>
-    );
-  };
-  
-  export default Home;
+      </div>
+    </section>
+  );
+};
+
+export default Home;
