@@ -10,12 +10,11 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="sponsor-images">
-        <div className="sponsor-row top-row">
+        <div className="sponsor-title">Proudly sponsored by:</div>
+        <div className="sponsor-row">
           <a href="https://lindoselementit.fi/" target="_blank" rel="noopener noreferrer">
             <img src={lindosLogo} alt="Lindos" className="sponsor-image lindos" />
           </a>
-        </div>
-        <div className="sponsor-row bottom-row">
           <a href="https://www.rocktape.com" target="_blank" rel="noopener noreferrer">
             <img src={rocktapeLogo} alt="RockTape" className="sponsor-image" />
           </a>
