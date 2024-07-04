@@ -9,11 +9,11 @@ import artomikaLogo from '../Images/Artomika.png';
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="sponsor-images">
+      <div className="footer-content">
         <div className="sponsor-title">Proudly sponsored by:</div>
-        <div className="sponsor-row">
+        <div className="sponsor-images">
           <a href="https://lindoselementit.fi/" target="_blank" rel="noopener noreferrer">
-            <img src={lindosLogo} alt="Lindos" className="sponsor-image lindos" />
+            <img src={lindosLogo} alt="Lindos" className="sponsor-image" />
           </a>
           <a href="https://www.rocktape.com" target="_blank" rel="noopener noreferrer">
             <img src={rocktapeLogo} alt="RockTape" className="sponsor-image" />

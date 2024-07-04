@@ -6,14 +6,13 @@
     z-index: 1000;
 }
 
-.sponsor-images {
+.footer-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
 }
 
-.sponsor-row {
+.sponsor-images {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,80 +25,44 @@
     object-fit: contain;
 }
 
-.sponsor-image.lindos {
-    height: 40px;
-}
-
 .sponsor-title {
-    display: none; /* Hide by default */
+    display: none;
 }
 
-@media (max-width: 767px) {
-    .footer {
-        bottom: 10px;
-    }
-
-    .sponsor-images {
-        gap: 10px;
-    }
-
-    .sponsor-row {
-        gap: 10px;
-    }
-
-    .sponsor-image {
-        height: 20px;
-    }
-
-    .sponsor-image.lindos {
-        height: 25px;
-    }
-}
-
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
     .footer {
         bottom: 30px;
     }
 
-    .sponsor-images {
-        flex-direction: row;
+    .footer-content {
+        width: 40%;
+        margin-left: 30%;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 20px;
     }
 
-    .sponsor-row {
-        flex-direction: row;
-    }
-
-    .sponsor-image {
-        height: 35px;
-    }
-
-    .sponsor-image.lindos {
-        height: 35px; /* Same size as other logos */
-    }
-}
-
-@media (min-width: 900px) {
     .sponsor-title {
         display: block;
         color: white;
         font-size: 1rem;
-        margin-right: 20px;
+        margin-bottom: 15px;
+        text-align: center;
     }
 
     .sponsor-images {
+        display: flex;
+        flex-direction: row;
         justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap; /* Prevent wrapping */
+        gap: 15px; /* Adjust space between logos */
+        width: 100%;
     }
-}
 
-@media (min-width: 1025px) {
     .sponsor-image {
-        height: 40px;
-    }
-
-    .sponsor-image.lindos {
-        height: 40px;
+        height: 25px; /* Slightly reduced height to fit in one row */
+        width: auto;
+        object-fit: contain;
     }
 }

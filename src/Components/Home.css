@@ -119,32 +119,6 @@
   }
 }
 
-@media (min-width: 1025px) {
-  .home-section {
-    height: calc(100vh - 100px);
-  }
-
-  .carousel-container {
-    left: 40%;
-    width: 52%;
-    height: 90%; /* Reduce the height to move it up */
-    top: 5%; /* Move it down from the top a bit */
-  }
-
-  .content-wrapper {
-    margin-left: 8%;
-    margin-bottom: 15%;
-  }
-
-  .home-title {
-    font-size: 3.5rem;
-  }
-
-  .home-paragraph {
-    font-size: 1.3rem;
-  }
-}
-
 @media (min-width: 768px) {
   .content-wrapper {
     margin-left: 1rem;
@@ -197,5 +171,50 @@
     width: 40%;
     height: 70%;
     top: 15%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .home-section {
+    height: calc(100vh - 100px);
+  }
+
+  .carousel-container {
+    left: 30%; /* Move carousel more to the right */
+    width: 70%; /* Increase width */
+    height: 60%; /* Increase height */
+    top: 6%;
+  }
+
+  .home-club-medium {
+    left: 17%; /* Move to the right */
+    top: 10%; /* Adjust top position */
+  }
+
+  .home-image-medium {
+    width: 120px; /* Reduce size */
+  }
+
+  .home-club-medium h1 {
+    font-size: 23px; /* Reduce font size */
+  }
+
+  .home-club-medium h2 {
+    font-size: 17px; /* Reduce font size */
+  }
+
+  .home-section .home-content .content-wrapper {
+    margin-right: 60%;
+    margin-bottom: 70%;
+    text-align: left; /* Align text to the left */
+    max-width: 40%; /* Limit width to avoid overlap with carousel */
+  }
+
+  .home-section .home-content .content-wrapper .home-title {
+    font-size: 2rem !important;
+  }
+
+  .home-section .home-content .content-wrapper .home-paragraph {
+    font-size: .9rem !important;
   }
 }
