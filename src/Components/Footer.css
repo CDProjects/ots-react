@@ -31,22 +31,19 @@
 
 @media (min-width: 1025px) {
     .footer {
-        bottom: 30px;
+        bottom: 20px;
     }
 
     .footer-content {
         width: 40%;
         margin-left: 30%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
 
     .sponsor-title {
         display: block;
         color: white;
         font-size: 1rem;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
         text-align: center;
     }
 
@@ -61,8 +58,22 @@
     }
 
     .sponsor-image {
-        height: 25px; /* Slightly reduced height to fit in one row */
+        height: 40px; /* Slightly reduced height to fit in one row */
         width: auto;
         object-fit: contain;
+    }
+}
+
+@media (min-width: 1200px) {
+    .footer-content {
+        width: 50%;
+        margin-left: 25%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .footer-content {
+        width: 40%;
+        margin-left: 30%;
     }
 }
