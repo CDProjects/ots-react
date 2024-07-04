@@ -2,17 +2,17 @@
 .home-section {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 125px); /* Subtract footer height */
     overflow: hidden;
     background-color: #000;
-  }
+}
   
   .carousel-container {
     position: absolute;
-    top: 0;
-    left: 35%;
-    width: 60%;
-    height: 100%;
+    top: 5%;
+    left: 40%;
+    width: 55%;
+    height: 90%;
     z-index: 1;
   }
   
@@ -44,16 +44,17 @@
   
   .home-content {
     position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; /* Aligns content to the bottom */
-  padding: 2rem;
-  z-index: 2;
-  }
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    z-index: 2;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
   
   .logo-title {
     display: flex;
@@ -73,9 +74,9 @@
 
   .content-wrapper {
     width: 100%;
-    max-width: 30rem; /* Adjust this value as needed */
-    margin-left: 5.5rem; /* Moves content to the right. Adjust as needed */
-    margin-bottom: 20rem;
+    max-width: 30rem;
+    margin-left: 5.5rem;
+    margin-bottom: 10rem; /* Reduce this value */
 }
   
   .home-title {
@@ -118,3 +119,9 @@
       font-size: 1rem;
     }
   }
+
+  @media (max-width: 1024px) {
+    .home-section {
+        height: 100vh; /* Full height on smaller screens */
+    }
+}
