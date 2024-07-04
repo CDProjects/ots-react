@@ -68,13 +68,6 @@
         gap: 20px;
     }
 
-    .sponsor-title {
-        display: block;
-        color: white;
-        font-size: 1rem;
-        margin-right: 20px;
-    }
-
     .sponsor-row {
         flex-direction: row;
     }
@@ -85,6 +78,19 @@
 
     .sponsor-image.lindos {
         height: 35px; /* Same size as other logos */
+    }
+}
+
+@media (min-width: 900px) {
+    .sponsor-title {
+        display: block;
+        color: white;
+        font-size: 1rem;
+        margin-right: 20px;
+    }
+
+    .sponsor-images {
+        justify-content: center;
     }
 }
 
