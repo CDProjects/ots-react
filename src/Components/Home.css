@@ -160,3 +160,42 @@
     font-size: 1rem;
   }
 }
+
+/* Existing styles remain the same */
+
+@media (min-width: 900px) {
+  .carousel-container {
+    left: 21%; /* Adjust this value to move the carousel slightly to the right */
+    width: 60%; /* Decrease the width of the carousel */
+    height: 80%; /* Decrease the height of the carousel */
+  }
+
+  .carousel,
+  .carousel-item,
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/* You may want to adjust the larger screen sizes as well */
+@media (min-width: 1200px) {
+  .carousel-container {
+    left: 50%;
+    width: 45%;
+    height: 75%;
+    top: 12.5%;
+  }
+}
+
+/* For even larger screens, if needed */
+@media (min-width: 1600px) {
+  .carousel-container {
+    left: 55%;
+    width: 40%;
+    height: 70%;
+    top: 15%;
+  }
+}
