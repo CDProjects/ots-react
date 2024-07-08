@@ -1,3 +1,4 @@
+/* Footer.css */
 .footer {
     position: fixed;
     bottom: 20px;
@@ -16,9 +17,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Allow wrapping */
-    gap: 10px; /* Reduced gap */
-    padding: 0 10px; /* Add some horizontal padding */
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 10px;
 }
 
 .sponsor-image {
@@ -29,6 +30,26 @@
 
 .sponsor-title {
     display: none;
+}
+
+@media (min-width: 430px) {
+    .team-page-footer {
+        background-color: black;
+        bottom: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .team-page-footer .sponsor-title,
+    .team-page-footer .sponsor-images {
+        opacity: 0.7;
+        transition: opacity 0.3s ease;
+    }
+
+    .team-page-footer:hover .sponsor-title,
+    .team-page-footer:hover .sponsor-images {
+        opacity: 1;
+    }
 }
 
 @media (min-width: 1025px) {
@@ -54,13 +75,13 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        flex-wrap: nowrap; /* Prevent wrapping */
-        gap: 15px; /* Adjust space between logos */
+        flex-wrap: nowrap;
+        gap: 15px;
         width: 100%;
     }
 
     .sponsor-image {
-        height: 40px; /* Slightly reduced height to fit in one row */
+        height: 40px;
         width: auto;
         object-fit: contain;
     }

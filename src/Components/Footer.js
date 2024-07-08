@@ -1,4 +1,6 @@
+// Footer.js
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import './Footer.css';
 import paavilainenLogo from '../Images/Paavilainen.png';
 import uudenmaanLogo from '../Images/Uudenmaan.png';
@@ -7,8 +9,11 @@ import lindosLogo from '../Images/Lindos.png';
 import artomikaLogo from '../Images/Artomika.png';
 
 const Footer = () => {
+  const location = useLocation();
+  const isTeamPage = location.pathname === '/team';
+
   return (
-    <footer className="footer">
+    <footer className={`footer ${isTeamPage ? 'team-page-footer' : ''}`}>
       <div className="footer-content">
         <div className="sponsor-title">Proudly sponsored by:</div>
         <div className="sponsor-images">
