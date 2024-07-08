@@ -1,0 +1,88 @@
+.fixtures-section {
+    text-align: center;
+    padding-top: 60px;
+    color: #ffffff;
+  }
+  
+  .fixtures-picture {
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+    margin: 10px auto;
+  }
+  
+  .fixtures-subtitle {
+    text-align: center;
+    margin: 5px 0;
+  }
+  
+  .fixtures-text {
+    display: flex;
+    text-align: left;
+    max-width: 400px;
+    margin: 10px auto;
+    font-size: 15px;
+  }
+  
+  .date {
+    margin-left: 10px;
+    width: 70px;
+    text-align: left;
+  }
+  
+  .teams {
+    margin-left: 10px;
+    width: 300px;
+    text-align: left;
+  }
+  
+  .score {
+    margin-left: 0px;
+    width: 100px;
+    text-align: right;
+  }
+  
+  .competition-table {
+    margin-bottom: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    .fixtures-text {
+      font-size: 18px;
+    }
+  
+    .date {
+      margin-left: 60px;
+    }
+  
+    .teams {
+      margin-left: -10px;
+      width: 200px;
+    }
+  
+    .score {
+      margin-right: 70px;
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .fixtures-section .date,
+    .fixtures-section .score,
+    .fixtures-section .teams {
+      font-size: 25px;
+    }
+  
+    .teams {
+      margin-left: 0;
+      width: 260px;
+    }
+  
+    .date {
+      margin: 0;
+      width: 80px;
+    }
+  
+    .score {
+      margin-right: -9px;
+    }
+  }
