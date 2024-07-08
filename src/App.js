@@ -9,6 +9,8 @@ import Team from './Components/Team';
 import Training from './Components/Training';
 import Juniors from './Components/Juniors';
 import Fixtures from './Components/Fixtures';
+import MedRec from './Components/MedRec';
+import Contact from './Components/Contact';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
             <Route path="/training" element={<Training />} />
             <Route path="/juniors" element={<Juniors />} />
             <Route path="/fixtures" element={<Fixtures />} />
+            <Route path="/media-recruitment" element={<MedRec />} />
+            <Route path="/contact" element={<Contact />} />
             {/* Other routes */}
           </Routes>
         </div>

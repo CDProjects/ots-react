@@ -1,0 +1,111 @@
+/* src/Components/MedRec.css */
+.med-rec-container {
+    padding: 20px;
+    background-color: #000000;
+    color: white;
+    font-family: "Oswald", sans-serif;
+  }
+  
+  .media-section, .recruitment-section {
+    text-align: center;
+    padding-top: 60px;
+    color: #ffffff;
+  }
+  
+  .section-title, .recruiting-section-title {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .med-rec-container .media-icons {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin: 20px auto;
+  }
+  
+  .med-rec-container .media-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .med-rec-container .media-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .med-rec-container .sponsor-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .med-rec-container .sponsor-image {
+    width: 80%;
+    max-width: 200px;
+    margin: 10px 0;
+  }
+  
+  .recruiting-image {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    display: block;
+  }
+  
+  .recruiting-content {
+    padding: 20px;
+  }
+  
+  .recruiting-content h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+  
+  .recruiting-content p, .recruiting-content ul {
+    font-size: 1rem;
+    padding: 0 1rem;
+    max-width: 82%;
+    margin: 0 auto 20px;
+    text-align: left;
+  }
+  
+  .recruiting-content ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .recruiting-content li {
+    margin-bottom: 10px;
+  }
+  
+  @media (min-width: 768px) {
+    .med-rec-container .sponsor-images {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  
+    .med-rec-container .sponsor-image {
+      width: 30%;
+    }
+  
+    .recruiting-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .recruiting-content h2 {
+      font-size: 2rem;
+    }
+  
+    .recruiting-content p, .recruiting-content ul {
+      font-size: 1.1rem;
+    }
+  }

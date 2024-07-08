@@ -28,8 +28,7 @@ const Navbar = () => {
     { to: '/training', text: 'TRAINING', id: 'training-link' },
     { to: '/juniors', text: 'JUNIORS', id: 'juniors-link' },
     { to: '/fixtures', text: 'FIXTURES', id: 'fixtures-link' },
-    { to: '/media', text: 'MEDIA', id: 'media-link' },
-    { to: '/recruitment', text: 'RECRUITMENT', id: 'recruiting-link' },
+    { to: '/media-recruitment', text: 'MEDIA & RECRUITMENT', id: 'media-recruitment-link' },
     { to: '/contact', text: 'CONTACT', id: 'contact-link' },
   ];
 
