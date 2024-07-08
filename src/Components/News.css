@@ -9,15 +9,13 @@
     text-align: center; /* Center the text */
   }
   
-  .news-section h1 {
-    margin-bottom: 20px;
-  }
   
   .fb-page {
     width: 100% !important; /* Ensure the plugin takes full width */
     max-width: 500px; /* Set a max width for the plugin */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
   }
+  
   
   @media (max-width: 600px) {
     .news-section {
