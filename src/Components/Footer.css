@@ -4,15 +4,17 @@
     bottom: 0;
     left: 0;
     width: 100%;
+    background-color: black;
     z-index: 1000;
     padding: 10px 0;
-    transition: background-color 0.3s ease;
 }
 
 .footer-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 400px; /* Match the initial max-width of the training section */
+    margin: 0 auto;
 }
 
 .sponsor-images {
@@ -35,34 +37,26 @@
     color: white;
 }
 
-/* Styles for Team page footer at all viewport sizes */
-.team-page-footer {
-    background-color: black;
+/* Adjust main content to account for footer */
+.training-section.training-page {
+    padding-bottom: 100px; /* Adjust this value based on your footer height */
 }
 
-.team-page-footer .sponsor-title,
-.team-page-footer .sponsor-images {
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-}
-
-.team-page-footer:hover .sponsor-title,
-.team-page-footer:hover .sponsor-images {
-    opacity: 1;
+@media (min-width: 768px) {
+    .footer-content {
+        max-width: 600px; /* Match the medium screen max-width of the training section */
+    }
 }
 
 @media (min-width: 1025px) {
-    
     .footer {
-    position: fixed;
-    bottom: 0;
-    left: 20%;
-    width:60%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1000px; /* Match the large screen max-width of the training section */
     }
     
     .footer-content {
-        width: 40%;
-        margin: 0 auto;
+        max-width: 800px;
     }
 
     .sponsor-title {
@@ -81,17 +75,5 @@
 
     .sponsor-image {
         height: 40px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .footer-content {
-        width: 50%;
-    }
-}
-
-@media (min-width: 1600px) {
-    .footer-content {
-        width: 40%;
     }
 }
