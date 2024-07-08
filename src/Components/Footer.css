@@ -51,8 +51,9 @@
 @media (min-width: 1025px) {
     .footer {
         left: 50%;
-        transform: translateX(-50%);
-        width: 1000px; /* Match the large screen max-width of the training section */
+    transform: translateX(-50%);
+    width: 1200px; /* Match the max-width of the juniors-section */
+    max-width: calc(100% - 40px); /* Account for padding */
     }
     
     .footer-content {
