@@ -1,30 +1,82 @@
 /* styles.css */
 
 .news-section {
-    padding: 80px 20px 20px; /* Add top padding to ensure it clears the navbar */
-    display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    flex-direction: column; /* Stack items vertically */
-    text-align: center; /* Center the text */
+  padding: 80px 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+  overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+.fb-page {
+  width: 100% !important;
+  max-width: 500px;
+  box-sizing: border-box;
+  overflow: hidden; /* Add this to prevent content from spilling out */
+}
+
+.fb-page-container {
+  width: 100%;
+  max-width: 500px; /* Match this with the .fb-page max-width */
+  margin: 0 auto; /* Center the container */
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.fb-page-container.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .news-section {
+    padding: 80px 10px 10px; /* Adjust padding for small screens */
+  }
+
   .fb-page {
     width: 100% !important; /* Ensure the plugin takes full width */
-    max-width: 500px; /* Set a max width for the plugin */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
   }
-  
-  
-  @media (max-width: 600px) {
-    .news-section {
-      padding: 80px 10px 10px; /* Adjust padding for small screens */
-    }
-  
+}
+
+/* Medium screens */
+@media (min-width: 768px) {
+    .fb-page-container,
     .fb-page {
-      width: 100% !important; /* Ensure the plugin takes full width */
+      max-width: 600px;
     }
   }
   
-  /* Add the rest of your existing CSS for Navbar, media queries, etc. */
+  /* Large screens */
+  @media (min-width: 1024px) {
+    .fb-page-container,
+    .fb-page {
+      max-width: 700px;
+    }
+  }
+  
+  /* Extra large screens */
+  @media (min-width: 1200px) {
+    .fb-page-container,
+    .fb-page {
+      max-width: 900px;
+    }
+  }
