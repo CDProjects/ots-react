@@ -115,6 +115,12 @@ body {
 }
 
 @media (min-width: 768px) {
+
+  html, body {
+    height: 100%;
+    overflow: hidden;
+  }
+  
   .content-wrapper {
     margin-left: 1rem;
     margin-bottom: 3rem;
