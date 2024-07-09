@@ -28,7 +28,7 @@ const News = () => {
 
     return (
         <div className="news-section">
-            <h1>News</h1>
+            <h1>NEWS</h1>
             {isLoading && <div className="spinner"></div>}
             <div className={`fb-page-container ${isLoading ? 'hidden' : ''}`}>
                 <div 

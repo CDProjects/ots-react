@@ -1,7 +1,7 @@
 /* styles.css */
 
 .news-section {
-  padding: 80px 20px 20px;
+  padding: 40px 20px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,7 +49,7 @@
 
 @media (max-width: 600px) {
   .news-section {
-    padding: 80px 10px 10px; /* Adjust padding for small screens */
+    padding: 40px; /* Adjust padding for small screens */
   }
 
   .fb-page {
