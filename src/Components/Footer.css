@@ -52,7 +52,7 @@
     .footer {
         left: 50%;
     transform: translateX(-50%);
-    width: 1200px; /* Match the max-width of the juniors-section */
+    width: 70%; /* Match the max-width of the juniors-section */
     max-width: calc(100% - 40px); /* Account for padding */
     }
     
