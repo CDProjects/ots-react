@@ -1,6 +1,11 @@
-// MedRec.js
 import React from 'react';
 import './MedRec.css';
+import fbIcon from '../Images/FB Icon.png';
+import fbMessengerIcon from '../Images/FB Messenger Icon.png';
+import igIcon from '../Images/IG Icon.png';
+import ytIcon from '../Images/YT Icon.png';
+import recruitment1 from '../Images/recruitment_1.png';
+import recruitment2 from '../Images/recruitment_2.png';
 
 const MedRec = () => {
   return (
@@ -11,39 +16,24 @@ const MedRec = () => {
         </div>
         <div className="media-icons">
           <a href="https://www.facebook.com/OldTownShamrocks" target="_blank" rel="noopener noreferrer">
-            <img src="/images/FB Icon.png" alt="Facebook" className="media-icon" />
+            <img src={fbIcon} alt="Facebook" className="media-icon" />
           </a>
           <a href="https://m.me/OldTownShamrocks" target="_blank" rel="noopener noreferrer">
-            <img src="/images/FB Messenger Icon.png" alt="Messenger" className="media-icon" />
+            <img src={fbMessengerIcon} alt="Messenger" className="media-icon" />
           </a>
           <a href="https://www.instagram.com/shamrocksrugby/" target="_blank" rel="noopener noreferrer">
-            <img src="/images/IG Icon.png" alt="Instagram" className="media-icon" />
+            <img src={igIcon} alt="Instagram" className="media-icon" />
           </a>
           <a href="https://www.youtube.com/channel/UC8Ke7di1wTGBBPMgIQ3Gy_A" target="_blank" rel="noopener noreferrer">
-            <img src="/images/YT Icon.png" alt="YouTube" className="media-icon" />
+            <img src={ytIcon} alt="YouTube" className="media-icon" />
           </a>
-        </div>
-        <div className="sponsor-images">
-          <a href="https://www.uudenmaanlukko.fi/" target="_blank" rel="noopener noreferrer">
-            <img src="/images/Paavilainen.png" alt="Paavilainen" className="sponsor-image" />
-          </a>
-          <a href="https://www.uudenmaanlukko.fi/" target="_blank" rel="noopener noreferrer">
-            <img src="/images/Uudenmaan.png" alt="Uudenmaan" className="sponsor-image" />
-          </a>
-          <a href="https://www.rocktape.com" target="_blank" rel="noopener noreferrer">
-            <img src="/images/Rocktape.png" alt="RockTape" className="sponsor-image" />
-          </a>
-          <a href="https://lindoselementit.fi/" target="_blank" rel="noopener noreferrer">
-            <img src="/images/Lindos.png" alt="Lindos" className="sponsor-image" />
-          </a>
-          <img src="/images/Artomika.png" alt="Artomika" className="sponsor-image" />
         </div>
       </section>
 
       <section id="recruiting-section" className="recruiting-section">
         <h1 className="recruiting-section-title">RECRUITMENT</h1>
         
-        <img src="/images/recruitment_1.png" alt="Recruiting Image 1" className="recruiting-image" />
+        <img src={recruitment1} alt="Recruiting Image 1" className="recruiting-image" />
         
         <div className="recruiting-content">
           <h2>NEW PEOPLE AND PLAYERS WELCOME</h2>
@@ -75,7 +65,7 @@ const MedRec = () => {
           </p>
         </div>
         
-        <img src="/images/recruitment_2.png" alt="Recruiting Image 2" className="recruiting-image" />
+        <img src={recruitment2} alt="Recruiting Image 2" className="recruiting-image" />
       </section>
     </div>
   );
