@@ -14,6 +14,12 @@ const News = () => {
         return () => clearTimeout(timer);
     }, []);
 
+    useEffect(() => {
+        if (!isLoading && window.FB) {
+            window.FB.XFBML.parse();
+        }
+    }, [isLoading]);
+
     return (
         <div className="news-section">
             <h1>NEWS</h1>
