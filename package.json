@@ -42,7 +42,13 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@craco/craco": "^7.1.0",
     "cross-env": "^7.0.3",
+    "image-minimizer-webpack-plugin": "^4.0.2",
+    "imagemin": "^9.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^10.0.0",
+    "imagemin-webpack-plugin": "^2.4.2",
     "source-map-explorer": "^2.5.3"
   }
 }
