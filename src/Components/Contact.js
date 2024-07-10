@@ -26,10 +26,13 @@ const Contact = () => {
           <p><strong>Chairman:</strong> Stefan Rogers <a href="tel:+358408655733">+358 40 8655733</a></p>
           <p><strong>Club Email:</strong> <a href="mailto:porvoo@finland.rugby">porvoo@finland.rugby</a></p>
         </div>
-        <img src={otsShieldLogo} alt="Shield" className="contact-image" />
+        <picture>
+          <source srcSet={otsShieldLogo.replace('.png', '.webp')} type="image/webp" />
+          <img src={otsShieldLogo} alt="Shield" className="contact-image" />
+        </picture>
       </div>
     </section>
   );
 };
 
-export default Contact;
+export default React.memo(Contact);

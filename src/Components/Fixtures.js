@@ -38,7 +38,6 @@ const Fixtures = () => {
 
         <picture>
           <source srcSet={shamrocksHRC2024.replace('.jpg', '.webp')} type="image/webp" />
-          <source srcSet={shamrocksHRC2024} type="image/jpeg" /> 
           <img src={shamrocksHRC2024} alt="3rd game 13th July 2024" className="fixtures-picture" />
         </picture>
         

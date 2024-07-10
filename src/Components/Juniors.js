@@ -12,12 +12,21 @@ const Juniors = () => {
           <h1 className="section-title">JUNIORS</h1>
         </div>
         <div className="new-images-wrapper">
-          <img src={juniorsImage2} alt="Juniors 2" className="juniors-image hidden-on-mobile" />
-          <img src={juniorsImage3} alt="Juniors 3" className="juniors-image hidden-on-mobile" />
+          <picture className="juniors-image hidden-on-mobile">
+            <source srcSet={juniorsImage2.replace('.png', '.webp')} type="image/webp" />
+            <img src={juniorsImage2} alt="Juniors 2" className="juniors-image hidden-on-mobile" />
+          </picture>
+          <picture className="juniors-image hidden-on-mobile">
+            <source srcSet={juniorsImage3.replace('.png', '.webp')} type="image/webp" />
+            <img src={juniorsImage3} alt="Juniors 3" className="juniors-image hidden-on-mobile" />
+          </picture>
         </div>
         <div className="juniors-content-group">
           <div className="juniors-picture-wrapper">
-            <img src={juniorsImage1} alt="Juniors" className="juniors-picture" />
+            <picture>
+              <source srcSet={juniorsImage1.replace('.png', '.webp')} type="image/webp" />
+              <img src={juniorsImage1} alt="Juniors" className="juniors-picture" />
+            </picture>
           </div>
           <div className="content-container">
             <p>
@@ -38,4 +47,4 @@ const Juniors = () => {
     );
   };
   
-  export default Juniors;
+  export default React.memo(Juniors);

@@ -3,16 +3,19 @@ import './Team.css';
 import teamPicture from '../Images/Team 2024.jpg'; // Adjust the path as needed
 
 const Team = () => {
-  return (
-    <section id="team-section" className="team-section">
-      <div id="team-marker"></div>
-      <h1 className="section-title">TEAM</h1>
-      <img
-        src={teamPicture}
-        alt="Team"
-        className="team-picture"
-      />
-      <h2>2024 Team Roster</h2>
+    return (
+      <section id="team-section" className="team-section">
+        <div id="team-marker"></div>
+        <h1 className="section-title">TEAM</h1>
+        <picture>
+          <source srcSet={teamPicture.replace('.jpg', '.webp')} type="image/webp" />
+          <img
+            src={teamPicture}
+            alt="Team"
+            className="team-picture"
+          />
+        </picture>
+        <h2>2024 Team Roster</h2>
       <div className="roster content-container">
         <div className="forwards">
           <h3>Forwards</h3>
@@ -58,4 +61,4 @@ const Team = () => {
   );
 };
 
-export default Team;
+export default React.memo(Team);

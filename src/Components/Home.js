@@ -55,9 +55,11 @@ const Home = () => {
 
   useEffect(() => {
     document.body.classList.add("home-page");
+
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 3000);
+
     return () => {
       clearInterval(interval);
       document.body.classList.remove("home-page");
@@ -75,7 +77,10 @@ const Home = () => {
               className={`carousel-item ${index === currentIndex ? "active" : ""}`}
             >
               <Suspense fallback={<div className="image-placeholder">Loading...</div>}>
-                <LazyImage src={image.src} alt={image.alt} />
+                <picture>
+                  <source srcSet={image.src.replace('.png', '.webp')} type="image/webp" />
+                  <LazyImage src={image.src} alt={image.alt} />
+                </picture>
               </Suspense>
             </div>
           ))}

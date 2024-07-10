@@ -35,15 +35,32 @@
   margin-bottom: 20px;
 }
 
-.hidden-on-mobile {
-  display: none;
-}
+.juniors-image.hidden-on-mobile {
+    display: none;
+  }
+  
+  @media (min-width: 1025px) {
+    .juniors-image.hidden-on-mobile {
+      display: block;
+    }
+  
+    picture.juniors-image.hidden-on-mobile {
+      width: 49%;
+      max-width: 580px;
+    }
+  
+    picture.juniors-image.hidden-on-mobile img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+  }
 
 @media (min-width: 1025px) {
     .juniors-section {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 60px 20px;
+      padding: 40px 20px;
       padding-bottom: 100px; /* Adjust this value based on your footer height */
     }
   
