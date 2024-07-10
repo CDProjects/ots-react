@@ -26,7 +26,7 @@ const Contact = () => {
           <p><strong>Chairman:</strong> Stefan Rogers <a href="tel:+358408655733">+358 40 8655733</a></p>
           <p><strong>Club Email:</strong> <a href="mailto:porvoo@finland.rugby">porvoo@finland.rugby</a></p>
         </div>
-        <img src={otsShieldLogo} alt="OTS Shield Logo" className="contact-image" />
+        <img src={otsShieldLogo} alt="Shield" className="contact-image" />
       </div>
     </section>
   );
