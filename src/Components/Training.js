@@ -1,5 +1,6 @@
 import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { TileLayer, Marker, Popup } from 'react-leaflet';
+import LazyMap from './LazyMap'; // Import LazyMap from the new file
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import './Training.css';
@@ -24,7 +25,7 @@ const Training = () => {
         <div className="training-item">
           <h3>Juniors</h3>
           <p>THURSDAYS 18:30-19:30 @ KOKON GRASS PITCH</p>
-          <MapContainer center={kokonPosition} zoom={13} scrollWheelZoom={false} className="map">
+          <LazyMap center={kokonPosition} zoom={13} scrollWheelZoom={false} className="map">
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -32,13 +33,13 @@ const Training = () => {
             <Marker position={kokonPosition}>
               <Popup>Kokon Grass Pitch</Popup>
             </Marker>
-          </MapContainer>
+          </LazyMap>
           <a href="https://maps.app.goo.gl/jxtehzqJn4foogGX6" target="_blank" rel="noopener noreferrer" className="map-link">View on Google Maps</a>
         </div>
         <div className="training-item">
           <h3>Mens</h3>
           <p>TUESDAYS 18:30-20:00 @ HAMARI</p>
-          <MapContainer center={hamariPosition} zoom={13} scrollWheelZoom={false} className="map">
+          <LazyMap center={hamariPosition} zoom={13} scrollWheelZoom={false} className="map">
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -46,12 +47,12 @@ const Training = () => {
             <Marker position={hamariPosition}>
               <Popup>Hamari</Popup>
             </Marker>
-          </MapContainer>
+          </LazyMap>
           <a href="https://maps.app.goo.gl/ZfG4PeB9jQcGicpx5" target="_blank" rel="noopener noreferrer" className="map-link">View on Google Maps</a>
         </div>
         <div className="training-item">
           <p>THURSDAYS 19:00-21:00 @ KOKON GRASS PITCH</p>
-          <MapContainer center={kokonPosition} zoom={13} scrollWheelZoom={false} className="map">
+          <LazyMap center={kokonPosition} zoom={13} scrollWheelZoom={false} className="map">
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -59,7 +60,7 @@ const Training = () => {
             <Marker position={kokonPosition}>
               <Popup>Kokon Grass Pitch</Popup>
             </Marker>
-          </MapContainer>
+          </LazyMap>
           <a href="https://maps.app.goo.gl/jxtehzqJn4foogGX6" target="_blank" rel="noopener noreferrer" className="map-link">View on Google Maps</a>
         </div>
       </div>

@@ -1,17 +1,17 @@
-// src/App.js
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './Components/ScrollToTop';
 import Navbar from './Components/Navbar';
-import Home from './Components/Home';
 import Footer from './Components/Footer';
-import News from './Components/News';
-import Team from './Components/Team';
-import Training from './Components/Training';
-import Juniors from './Components/Juniors';
-import Fixtures from './Components/Fixtures';
-import MedRec from './Components/MedRec';
-import Contact from './Components/Contact';
+
+const Home = lazy(() => import('./Components/Home'));
+const News = lazy(() => import('./Components/News'));
+const Team = lazy(() => import('./Components/Team'));
+const Training = lazy(() => import('./Components/Training'));
+const Juniors = lazy(() => import('./Components/Juniors'));
+const Fixtures = lazy(() => import('./Components/Fixtures'));
+const MedRec = lazy(() => import('./Components/MedRec'));
+const Contact = lazy(() => import('./Components/Contact'));
 
 function App() {
   return (
@@ -20,17 +20,18 @@ function App() {
       <div className="App">
         <div className="content-container">
           <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/news" element={<News />} />
-            <Route path="/team" element={<Team />} />
-            <Route path="/training" element={<Training />} />
-            <Route path="/juniors" element={<Juniors />} />
-            <Route path="/fixtures" element={<Fixtures />} />
-            <Route path="/media-recruitment" element={<MedRec />} />
-            <Route path="/contact" element={<Contact />} />
-            {/* Other routes */}
-          </Routes>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/training" element={<Training />} />
+              <Route path="/juniors" element={<Juniors />} />
+              <Route path="/fixtures" element={<Fixtures />} />
+              <Route path="/media-recruitment" element={<MedRec />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </Suspense>
         </div>
         <Footer />
       </div>

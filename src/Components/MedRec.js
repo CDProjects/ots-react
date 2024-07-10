@@ -43,7 +43,7 @@ const MedRec = () => {
       <section id="recruiting-section" className="recruiting-section" ref={recruitmentRef}>
         <h1 className="recruiting-section-title">RECRUITMENT</h1>
         
-        <img src={recruitment1} alt="Recruiting Image 1" className="recruiting-image" />
+        <img src={recruitment1} alt="Recruiting 1" className="recruiting-image" />
         
         <div className="recruiting-content">
           <h2>NEW PEOPLE AND PLAYERS WELCOME</h2>
@@ -75,7 +75,7 @@ const MedRec = () => {
           </p>
         </div>
         
-        <img src={recruitment2} alt="Recruiting Image 2" className="recruiting-image" />
+        <img src={recruitment2} alt="Recruiting 2" className="recruiting-image" />
       </section>
     </div>
   );

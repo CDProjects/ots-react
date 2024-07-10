@@ -12,12 +12,12 @@ const Juniors = () => {
           <h1 className="section-title">JUNIORS</h1>
         </div>
         <div className="new-images-wrapper">
-          <img src={juniorsImage2} alt="Juniors Picture 2" className="juniors-image hidden-on-mobile" />
-          <img src={juniorsImage3} alt="Juniors Picture 3" className="juniors-image hidden-on-mobile" />
+          <img src={juniorsImage2} alt="Juniors 2" className="juniors-image hidden-on-mobile" />
+          <img src={juniorsImage3} alt="Juniors 3" className="juniors-image hidden-on-mobile" />
         </div>
         <div className="juniors-content-group">
           <div className="juniors-picture-wrapper">
-            <img src={juniorsImage1} alt="Juniors Picture" className="juniors-picture" />
+            <img src={juniorsImage1} alt="Juniors" className="juniors-picture" />
           </div>
           <div className="content-container">
             <p>

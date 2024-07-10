@@ -9,7 +9,7 @@ const Team = () => {
       <h1 className="section-title">TEAM</h1>
       <img
         src={teamPicture}
-        alt="Team Picture"
+        alt="Team"
         className="team-picture"
       />
       <h2>2024 Team Roster</h2>
