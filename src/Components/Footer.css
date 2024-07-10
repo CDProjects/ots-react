@@ -1,5 +1,10 @@
 /* Footer.css */
-.footer {
+:root {
+    --footer-height: 60px; /* Adjust this value based on your footer's actual height */
+  }
+  
+  .footer {
+    height: var(--footer-height);
     position: fixed;
     bottom: 0;
     left: 0;

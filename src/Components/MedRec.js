@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import './MedRec.css';
 import fbIcon from '../Images/FB Icon.png';
 import fbMessengerIcon from '../Images/FB Messenger Icon.png';
@@ -8,6 +9,15 @@ import recruitment1 from '../Images/recruitment_1.png';
 import recruitment2 from '../Images/recruitment_2.png';
 
 const MedRec = () => {
+  const location = useLocation();
+  const recruitmentRef = useRef(null);
+
+  useEffect(() => {
+    if (location.hash === '#recruitment' && recruitmentRef.current) {
+      recruitmentRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [location]);
+
   return (
     <div className="med-rec-container">
       <section id="media-section" className="media-section">
@@ -30,7 +40,7 @@ const MedRec = () => {
         </div>
       </section>
 
-      <section id="recruiting-section" className="recruiting-section">
+      <section id="recruiting-section" className="recruiting-section" ref={recruitmentRef}>
         <h1 className="recruiting-section-title">RECRUITMENT</h1>
         
         <img src={recruitment1} alt="Recruiting Image 1" className="recruiting-image" />

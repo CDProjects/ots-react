@@ -51,10 +51,19 @@ const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
+    // Add 'home-page' class to body when component mounts
+    document.body.classList.add("home-page");
+
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 3000);
-    return () => clearInterval(interval);
+
+    // Clean up function
+    return () => {
+      clearInterval(interval);
+      // Remove 'home-page' class from body when component unmounts
+      document.body.classList.remove("home-page");
+    };
   }, []);
 
   return (
@@ -81,7 +90,7 @@ const Home = () => {
             We are on the hunt for new people and players of <br />
             all sizes to join our club - No experience needed!
           </p>
-          <Link to="/contact" className="about-us-btn">
+          <Link to="/media-recruitment#recruitment" className="about-us-btn">
             MORE ABOUT THIS
           </Link>
         </div>

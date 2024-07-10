@@ -72,6 +72,14 @@
     margin-bottom: 10px;
 }
 
+.recruitment-section {
+    scroll-margin-top: 60px; /* Adjust this value based on your navbar height */
+  }
+  
+  #recruiting-section {
+    scroll-margin-top: 60px; /* Adjust this value based on your navbar height */
+  }
+
 @media (min-width: 768px) {
 
     .media-section {

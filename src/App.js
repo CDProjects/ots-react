@@ -1,6 +1,7 @@
 // src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './Components/ScrollToTop';
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import Footer from './Components/Footer';
@@ -15,6 +16,7 @@ import Contact from './Components/Contact';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <div className="content-container">
           <Navbar />

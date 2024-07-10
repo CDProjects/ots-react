@@ -1,4 +1,6 @@
 .fixtures-section {
+    padding-bottom: calc(var(--footer-height) + 20px); /* Add extra padding to ensure content is visible */
+    min-height: 100vh; /* Ensure the section takes at least the full viewport height */
     text-align: center;
     padding-top: 60px;
     color: #ffffff;

@@ -16,6 +16,10 @@ body {
   background-color: #000;
 }
 
+body.home-page {
+  overflow: hidden;
+}
+
 .carousel-container {
   position: absolute;
   top: 0;
@@ -116,11 +120,11 @@ body {
 
 @media (min-width: 768px) {
 
-  html, body {
-    height: 100%;
+  .home-section {
+    height: 100vh;
     overflow: hidden;
-  }
-  
+}
+
   .content-wrapper {
     margin-left: 1rem;
     margin-bottom: 3rem;
@@ -206,46 +210,6 @@ body {
     font-size: 2rem !important;
   }
 
-  .home-section .home-content .content-wrapper .home-paragraph {
-    font-size: .9rem !important;
-  }
-}
-
-/* Medium screens */
-@media (min-width: 1025px) {
-  .home-section {
-    height: calc(100vh - 100px);
-  }
-  .carousel-container {
-    left: 30%;
-    width: 70%;
-    height: 60%;
-    top: 6%;
-  }
-  .home-club-medium {
-    left: 17%;
-    top: 10%;
-  }
-  .home-image-medium {
-    width: 120px;
-  }
-  .home-club-medium h1 {
-    font-size: 23px;
-  }
-  .home-club-medium h2 {
-    font-size: 17px;
-  }
-  .home-section .home-content .content-wrapper {
-    position: fixed;
-    left: 19%;
-    bottom: 55%;
-    width: 30%;
-    margin: 0;
-    text-align: left;
-  }
-  .home-section .home-content .content-wrapper .home-title {
-    font-size: 2rem !important;
-  }
   .home-section .home-content .content-wrapper .home-paragraph {
     font-size: .9rem !important;
   }
