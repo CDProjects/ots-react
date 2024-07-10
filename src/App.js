@@ -15,7 +15,7 @@ const Contact = lazy(() => import('./Components/Contact'));
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <ScrollToTop />
       <div className="App">
         <div className="content-container">
