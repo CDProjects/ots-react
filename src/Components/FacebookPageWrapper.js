@@ -1,4 +1,3 @@
-// FacebookPageWrapper.js
 import React, { useEffect, useRef } from 'react';
 
 const FacebookPageWrapper = ({ fbPageUrl, tabs, width, height }) => {
@@ -21,7 +20,7 @@ const FacebookPageWrapper = ({ fbPageUrl, tabs, width, height }) => {
       };
       document.body.appendChild(script);
     }
-  }, []);
+  }, [width]); // Re-run when width changes
 
   return (
     <div ref={containerRef}>

@@ -31,9 +31,18 @@
     justify-content: center;
     margin-top: 20px;
     width: 100%;
-    max-width: 500px; /* Match this to the width prop in FacebookPageWrapper */
+    max-width: 500px; /* Adjust this to your preferred maximum width */
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden; /* This will prevent horizontal scrolling */
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    .fb-page-container {
+        width: 100%;
+        padding: 0 10px; /* Add some padding on smaller screens */
+    }
 }
 
 /* Responsive adjustments */

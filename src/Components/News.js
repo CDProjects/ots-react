@@ -1,24 +1,35 @@
-// News.js
 import React, { useState, useEffect } from 'react';
 import './News.css';
 import FacebookPageWrapper from './FacebookPageWrapper';
 
 const News = () => {
     const [isLoading, setIsLoading] = useState(true);
+    const [containerWidth, setContainerWidth] = useState(500); // Default width
 
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsLoading(false);
-        }, 3000); // Adjust this timeout as needed
+        }, 3000);
 
-        return () => clearTimeout(timer);
+        const handleResize = () => {
+            const width = Math.min(500, window.innerWidth - 40); // 20px padding on each side
+            setContainerWidth(width);
+        };
+
+        window.addEventListener('resize', handleResize);
+        handleResize(); // Call once to set initial size
+
+        return () => {
+            clearTimeout(timer);
+            window.removeEventListener('resize', handleResize);
+        };
     }, []);
 
     useEffect(() => {
         if (!isLoading && window.FB) {
             window.FB.XFBML.parse();
         }
-    }, [isLoading]);
+    }, [isLoading, containerWidth]);
 
     return (
         <div className="news-section">
@@ -33,7 +44,7 @@ const News = () => {
                     <FacebookPageWrapper 
                         fbPageUrl="https://www.facebook.com/OldTownShamrocks/"
                         tabs="timeline"
-                        width="500"
+                        width={containerWidth.toString()}
                         height="700"
                     />
                 </div>

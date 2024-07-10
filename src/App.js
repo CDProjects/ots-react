@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './Components/ScrollToTop';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
+import Spinner from './Components/Spinner';
 
 const Home = lazy(() => import('./Components/Home'));
 const News = lazy(() => import('./Components/News'));
@@ -20,7 +21,7 @@ function App() {
       <div className="App">
         <div className="content-container">
           <Navbar />
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Spinner />}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/news" element={<News />} />
