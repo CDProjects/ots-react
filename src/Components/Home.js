@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
@@ -23,6 +23,9 @@ import taras from "../Images/Taras 1.png";
 import tommi from "../Images/Tommi 1.png";
 import tommiP from "../Images/Tommi P 1.png";
 import tuomas from "../Images/Tuomas 1.png";
+
+// Lazy load image component
+const LazyImage = lazy(() => import('./LazyImage'));
 
 const images = [
   { src: akseli, alt: "Akseli" },
@@ -51,17 +54,12 @@ const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    // Add 'home-page' class to body when component mounts
     document.body.classList.add("home-page");
-
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 3000);
-
-    // Clean up function
     return () => {
       clearInterval(interval);
-      // Remove 'home-page' class from body when component unmounts
       document.body.classList.remove("home-page");
     };
   }, []);
@@ -74,11 +72,11 @@ const Home = () => {
           {images.map((image, index) => (
             <div
               key={index}
-              className={`carousel-item ${
-                index === currentIndex ? "active" : ""
-              }`}
+              className={`carousel-item ${index === currentIndex ? "active" : ""}`}
             >
-              <img src={image.src} alt={image.alt} />
+              <Suspense fallback={<div className="image-placeholder">Loading...</div>}>
+                <LazyImage src={image.src} alt={image.alt} />
+              </Suspense>
             </div>
           ))}
         </div>
