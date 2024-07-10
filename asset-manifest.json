@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ots-react/static/css/main.1b51c87a.css",
+    "main.css": "/ots-react/static/css/main.b1b60f79.css",
     "main.js": "/ots-react/static/js/main.959915cf.js",
     "static/css/559.ced1e141.chunk.css": "/ots-react/static/css/559.ced1e141.chunk.css",
     "static/js/559.5f015d5e.chunk.js": "/ots-react/static/js/559.5f015d5e.chunk.js",
@@ -56,7 +56,7 @@
     "static/media/Rocktape.png": "/ots-react/static/media/Rocktape.9ceb21343555691dce08.png",
     "static/media/OTS Shield Logo.png": "/ots-react/static/media/OTS Shield Logo.2bb2da52f989905a9cd0.png",
     "index.html": "/ots-react/index.html",
-    "main.1b51c87a.css.map": "/ots-react/static/css/main.1b51c87a.css.map",
+    "main.b1b60f79.css.map": "/ots-react/static/css/main.b1b60f79.css.map",
     "main.959915cf.js.map": "/ots-react/static/js/main.959915cf.js.map",
     "559.ced1e141.chunk.css.map": "/ots-react/static/css/559.ced1e141.chunk.css.map",
     "559.5f015d5e.chunk.js.map": "/ots-react/static/js/559.5f015d5e.chunk.js.map",
@@ -80,7 +80,7 @@
     "707.9c1ab722.chunk.js.map": "/ots-react/static/js/707.9c1ab722.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b51c87a.css",
+    "static/css/main.b1b60f79.css",
     "static/js/main.959915cf.js"
   ]
 }
