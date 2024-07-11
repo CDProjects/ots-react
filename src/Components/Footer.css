@@ -4,7 +4,6 @@
   }
   
   .footer {
-    height: var(--footer-height);
     position: fixed;
     bottom: 0;
     left: 0;
@@ -12,6 +11,7 @@
     background-color: black;
     z-index: 1000;
     padding: 10px 0;
+    /* Remove the fixed height */
 }
 
 .footer-content {
@@ -35,6 +35,8 @@
     height: 30px;
     width: auto;
     object-fit: contain;
+    /* Add max-height to ensure visibility */
+    max-height: calc(100% - 20px); /* Subtracting padding */
 }
 
 .sponsor-title {
